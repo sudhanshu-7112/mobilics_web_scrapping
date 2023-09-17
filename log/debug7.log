@@ -1,0 +1,55 @@
+Traceback (most recent call last):
+  File "/home/sudhanshu/rest_project/mobilics/manage.py", line 22, in <module>
+    main()
+  File "/home/sudhanshu/rest_project/mobilics/manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "/home/sudhanshu/rest_project/restENV/lib/python3.10/site-packages/django/core/management/__init__.py", line 446, in execute_from_command_line
+    utility.execute()
+  File "/home/sudhanshu/rest_project/restENV/lib/python3.10/site-packages/django/core/management/__init__.py", line 440, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "/home/sudhanshu/rest_project/restENV/lib/python3.10/site-packages/django/core/management/base.py", line 402, in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "/home/sudhanshu/rest_project/restENV/lib/python3.10/site-packages/django/core/management/base.py", line 448, in execute
+    output = self.handle(*args, **options)
+  File "/home/sudhanshu/rest_project/restENV/lib/python3.10/site-packages/django_crontab/management/commands/crontab.py", line 29, in handle
+    Crontab().run_job(options['jobhash'])
+  File "/home/sudhanshu/rest_project/restENV/lib/python3.10/site-packages/django_crontab/crontab.py", line 126, in run_job
+    job = self.__get_job_by_hash(job_hash)
+  File "/home/sudhanshu/rest_project/restENV/lib/python3.10/site-packages/django_crontab/crontab.py", line 171, in __get_job_by_hash
+    raise RuntimeError(
+RuntimeError: No job with hash ac25df42af543973845055556e205b02 found. It seems the crontab is out of sync with your settings.CRONJOBS. Run "python manage.py crontab add" again to resolve this issue!
+Failed to complete cronjob at ('22 23 * * *', 'api.views.scrap_data', '>> /home/sudhanshu/rest_project/mobilics/log/debug7.log 2>&1 ')
+Traceback (most recent call last):
+  File "/home/sudhanshu/rest_project/restENV/lib/python3.10/site-packages/django_crontab/crontab.py", line 145, in run_job
+    func(*job_args, **job_kwargs)
+  File "/home/sudhanshu/rest_project/mobilics/api/views.py", line 43, in scrap_data
+    value = driver.find_element(By.CLASS_NAME,"r_srp__rightSection")
+  File "/home/sudhanshu/rest_project/restENV/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 738, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "/home/sudhanshu/rest_project/restENV/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py", line 344, in execute
+    self.error_handler.check_response(response)
+  File "/home/sudhanshu/rest_project/restENV/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".r_srp__rightSection"}
+  (Session info: chrome=116.0.5845.187); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+#0 0x559e86805e23 <unknown>
+#1 0x559e8652e7a7 <unknown>
+#2 0x559e8656d1d3 <unknown>
+#3 0x559e8656d2c1 <unknown>
+#4 0x559e865a8a04 <unknown>
+#5 0x559e8658e03d <unknown>
+#6 0x559e865a6369 <unknown>
+#7 0x559e8658dde3 <unknown>
+#8 0x559e86561a7b <unknown>
+#9 0x559e8656281e <unknown>
+#10 0x559e867c7638 <unknown>
+#11 0x559e867cb507 <unknown>
+#12 0x559e867d5c4c <unknown>
+#13 0x559e867cc136 <unknown>
+#14 0x559e8679a9cf <unknown>
+#15 0x559e867efb98 <unknown>
+#16 0x559e867efd68 <unknown>
+#17 0x559e867fecb3 <unknown>
+#18 0x7f91a1294b43 <unknown>
+
