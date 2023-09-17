@@ -139,5 +139,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRONJOBS = [
-    ('22 23 * * *', 'api.views.scrap_data','>> ' + os.path.join(BASE_DIR,'log/debug7.log' + ' 2>&1 '))
+    ('0 9,21 * * *', 'api.views.scrap_data','>> ' + os.path.join(BASE_DIR,'log/debug7.log' + ' 2>&1 '))
 ]
